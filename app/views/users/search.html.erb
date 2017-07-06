@@ -1,0 +1,13 @@
+<h1>Search!</h1>
+
+<nav class="users-search">
+  <input type="text" name="name">
+
+  <ul class="users">
+    <% @users.each do |user| %>
+    <li>
+      <%= link_to user.username, user_url(user) %>
+      <%= render "follows/form", user: user %>
+    </li>
+  </ul>
+</nav>
